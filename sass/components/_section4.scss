@@ -1,0 +1,101 @@
+
+   
+.section4 {
+    height: 708px;
+    margin-bottom: 94px;
+    text-align: center;
+    background-color: #f5f4fa;
+    &__tittle3 {
+        display: block;
+        text-align: center;
+        padding-top: 94px;
+        margin-top: 0px;
+        margin-bottom: 50px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        letter-spacing: 0.03em;
+        color:  $color-text-dark;
+    }
+
+    &_ul {
+        
+        @include flex(normal, center);
+        list-style-type: none;
+        .section4__image {
+        margin-right: 30px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+        padding-bottom: 30px;
+
+        
+            .section4__name-worker {
+                margin-top: 30px;
+                margin-bottom: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: 0.03em;
+                color:  $color-text-dark;
+            } 
+
+            .section4__profesion {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: 0.03em;
+                color:$color-text;
+                margin-top: 10px;
+                margin-bottom: 16px;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+            
+
+            /*iconos redes sociales*/
+            
+            .social-network {
+                @include flex(normal, space-between);
+                margin: 0 auto;
+                height: 44px;
+                width: 206px;
+                fill: $color-text;
+               
+                .section4__link {
+                    @include flex(center, center);
+                    width: 44px;
+                    height: 44px;
+
+                    .section4-icon {
+                        height: 20px;
+                        width: 20px;
+                    
+                    }   
+                }  
+            }
+        }
+    }
+
+}
+  
+  .section4__link:hover,
+  .section4__link:focus {
+    background-color:$color-blue;
+    border-radius: 22px;
+    border: 1px #afb1b8 solid;
+    outline: none;
+  }
+  
+  .section4__link:hover .section4-icon,
+  .section4__link:focus .section4-icon {
+    border-color: $color-white;
+    fill: $color-white;
+    background-color: $color-blue;
+    
+  }
+  
+ 

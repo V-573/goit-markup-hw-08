@@ -1,0 +1,113 @@
+
+.header {
+
+    @include flex(center, space-between);
+    margin-top:24px;
+    margin-bottom: 22px;
+    
+
+    .navbar{
+        display: flex; 
+        margin-right: 306px;
+
+        &__menu{
+            @include flex(normal, space-between);
+            list-style-type: none;
+            width: 293px;
+        }
+        &__list{
+        position: relative;
+        }
+        &__link {
+        color:  $color-text-dark;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.02    
+        }
+
+        &__link:hover,      
+        &__link:focus {
+        color:$color-blue;
+        outline: none;
+        
+        }
+    
+        &__link::after{
+        content: "";
+        position: absolute;
+        bottom: -27px;
+        left: 0; 
+        width: 0;
+        height: 4px;
+        background: $color-blue;
+        border-radius: 12px;
+        }
+    
+        &__link:hover::after{
+        width:100%;
+        }
+    
+
+    }
+  
+  
+  
+    .booking{
+        @include flex(normal, space-between);
+    
+  
+        &__link2{
+        position:relative;
+        text-align: end; /*coloque el texto al final del contenedor para darle espacio al svg*/
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        color:$color-text;
+        }
+    
+        &__link2--email{
+            margin-right: 30px;
+            width: 161px;
+        }
+        
+        &__link2--phone{
+            width: 142px;
+        }
+        
+        &__icon{
+        position: absolute;
+        fill: $color-text;
+        left:0px;
+        }
+        
+        
+        &__icon--sobre {
+            height: 12px;
+            width: 16px;
+            top:2px;
+        }   
+        
+        &__icon--phone {
+            height: 16px;
+            width: 10px;
+            top:0px;
+        }
+        
+        &__link2:hover{
+            color:$color-blue;
+            outline: none;
+        }
+        
+        &__link2:hover .booking__icon,
+        &__link2:focus .booking__icon
+            {
+                color:$color-blue;
+                outline: none;
+                fill:$color-blue;
+            }
+           
+    }
+}

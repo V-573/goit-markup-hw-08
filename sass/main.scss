@@ -1,0 +1,41 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./components/headers";
+@import "./components/section1";
+@import "./components/section2";
+@import "./components/section3";
+@import "./components/section4";
+@import "./components/section5";
+@import "./components/footer";
+@import "./components/portfolioFilter";
+@import "./components/portfolioCards";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $color-white;
+  font-family: "Roboto", sans-serif;
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  margin-right: 93px;
+  width: 145px;
+  letter-spacing: 0.03em;
+  color: $color-blue;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,49 @@
+.section5 {
+    margin: 0 auto;
+    margin-bottom:94px;
+
+    &-text {
+        text-align: center;
+        margin: 0px;
+        padding-bottom: 44px;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        letter-spacing: 0.03em;
+        color:  $color-text-dark;
+    }
+
+    &__container-logos {
+        @include flex(normal, space-between);
+       
+        .section5__link-container {
+
+
+            @include flex(center, center);
+            border: 1px  $color-svg-section45 solid;
+            border-radius: 4px;
+            width: 150px;
+            height: 81px;
+            fill:  $color-svg-section45 ;
+
+            .section5__client-logo {
+                height: 52px;
+                width: 106px;
+                fill: $color-svg-section45 solid;
+            }
+
+        }
+    }
+
+  }
+
+.section5__link-container:hover,
+.section5__link-container:focus {
+    border-color: $color-blue;
+    fill: $color-blue;
+    outline: none;
+}
+  
+ 
+  
+  
