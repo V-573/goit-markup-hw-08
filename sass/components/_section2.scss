@@ -1,69 +1,106 @@
+.container{
 
-.section2{
-    margin-bottom: 94px;
+.section2 {
+  margin-bottom: 94px;
 
+ 
+    .section2__caracteristicas {
+      display: flex;
 
-    &__caracteristicas {
-        display: flex;
-        list-style-type: none;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        gap:30px;
-    }
-        &__list {
-        
+      list-style-type: none;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      gap: 30px;
+
+      .section2__list {
         font-weight: 400;
         font-size: 14px;
         line-height: 24px;
         letter-spacing: 0.03em;
         width: 270px;
+
+        .section2__container {
+          @include flex(center, center);
+
+          width: 270px;
+          height: 120px;
+          background: $color-svg-section25;
+          border-radius: 4px;
+          margin-bottom: 30px;
+
+          .section2__svg {
+            height: 70px;
+            width: 70px;
+          }
         }
 
-            &__container {
-                
-                @include flex(center, center);
-
-                width: 270px;
-                height: 120px;
-                background: $color-svg-section25;
-                border-radius: 4px;
-                margin-bottom: 30px;
-            }
-
-
-                &__svg {
-                    height: 70px;
-                    width: 70px;
-                }
-
-
-
-
-        &__title {
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 16px;
-            letter-spacing: 0.06em;
-        color:  $color-text-dark;
+        .section2__title {
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: 0.06em;
+          color: $color-text-dark;
         }
 
-        
-        &__parrafo {
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 24px;
-            letter-spacing: 0.03em;
-            color: $color-text;
-            justify-content: center;
-        
+        .section2__parrafo {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 24px;
+          letter-spacing: 0.03em;
+          color: $color-text;
+          justify-content: center;
         }
-
-
+      }
+    }
+  }
 }
- 
-  
- 
-  
-  
-  
-  
+@include screen-1200{
+
+    .container{
+        width:1200px;
+        padding: 0;
+        height: auto;
+
+    .section2 {
+        
+        .section2__caracteristicas {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+}
+}
+
+
+@include screen-640{
+
+    .container{
+        width:640px;
+        padding: 0;
+
+    .section2 {
+        
+        .section2__caracteristicas {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+}
+}
+
+
+@include screen-480{
+
+    .container{
+        width:480px;
+        padding: 0;
+
+    .section2 {
+        
+        .section2__caracteristicas {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+}
+}

@@ -1,5 +1,6 @@
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./components/container";
 @import "./components/headers";
 @import "./components/section1";
 @import "./components/section2";
@@ -32,10 +33,3 @@ body {
   color: $color-blue;
 }
 
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}

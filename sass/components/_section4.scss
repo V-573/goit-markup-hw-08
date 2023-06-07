@@ -97,5 +97,26 @@
     background-color: $color-blue;
     
   }
+
+  @include screen-480{
+ .section4{
+    margin-bottom: 40px;
+    height:auto;
+    .container{
+        width:480px;
+        padding: 0;
   
- 
+   
+      .section4_ul{
+        @include flex(normal, center);
+  
+        flex-wrap: wrap;
+
+        .section4__image{
+
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+          
+  }
+}}}

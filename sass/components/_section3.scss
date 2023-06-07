@@ -13,16 +13,17 @@
   }
 
   &__list {
-    @include flex(normal, center);
+    @include flex(normal, space-between);
     margin-bottom: 94px;
     list-style-type: none;
+
 
     .section3__box {
       @include flex(flex-end, center);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      margin-right: 30px;
+      // margin-right: 30px;
       width: 370px;
       height: 294px;
     }
@@ -55,5 +56,30 @@
       text-align: center;
       width: 310px;
     }
+  }
+}
+
+
+@include screen-480{
+
+  .container{
+      width:480px;
+      padding: 0;
+
+  .section3{
+    display:none;
+
+    // .section3__list{
+    //   @include flex(normal, center);
+
+    //   flex-wrap: wrap;
+    //   .section3__box{
+    //     margin-bottom: 20px;
+    //   }
+
+}
+
+
+
   }
 }

@@ -3,7 +3,12 @@ aria-hidden="true"
 xmlns="http://www.w3.org/2000/svg"
 overflow="hidden">
     <defs>
+<symbol id="hamburger">
+<path  d="M0 2.66667V0H24V2.66667H0ZM0 9.33333H24V6.66667H0V9.33333ZM0 16H24V13.3333H0V16Z" fill="black"/>
 
+
+
+</symbol>
         <symbol id="icon-user"> 
             <path d="M6 6C7.6575 6 9 4.6575 9 3C9 1.3425 7.6575 0 6 0C4.3425 0 3 1.3425
              3 3C3 4.6575 4.3425 6 6 6ZM6 7.5C3.9975 7.5 0 8.505 0 10.5V11.25C0 11.6625

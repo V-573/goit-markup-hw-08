@@ -1,7 +1,7 @@
 
 .backdrop {
     @include flex(center, center);
-margin-top: 30px;
+    margin-top: 30px;
     background-color: hsla(0, 0%, 0%, 0.2);
     position: fixed;
     top: 0px;

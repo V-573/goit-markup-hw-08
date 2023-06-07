@@ -46,4 +46,25 @@
   
  
   
-  
+@include screen-480{
+    
+       .container{
+           width:480px;
+           padding: 0;
+     .section5{
+      
+         .section5__container-logos{
+           @include flex(normal, space-evenly);
+     gap:30px;
+           flex-wrap: wrap;
+           
+             .section5__link-container{
+   width: 210px;
+             height: 92px;
+         
+             
+
+             }
+          
+     }
+   }}}
