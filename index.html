@@ -20,7 +20,6 @@
   </head>
   <body>
     <div class="container">
-
       <header class="header1">
         <p class="logo">WebStudio</p>
 
@@ -53,13 +52,14 @@
             class="booking__link2 booking__link2--email"
             href="info@devstudio.com"
             ><svg class="booking__icon booking__icon--sobre">
-              <use href="./images/icons.svg#icon-sobre"></use></svg>info@devstudio.com</a
+              <use href="./images/icons.svg#icon-sobre"></use>
+              </svg>info@devstudio.com</a
           >
           <a
             class="booking__link2 booking__link2--phone"
             href="+52 55 5529 6000"
             ><svg class="booking__icon booking__icon--phone">
-              <use href="./images/icons.svg#icon-smartphone"></use></svg>+52 55 5529 6000</a
+              <use href="./images/icons.svg#icon-smartphone"></use></svg            >+52 55 5529 6000</a
           >
         </div>
       </header>
@@ -87,9 +87,9 @@
           <li><a href="" class="link">Linkedin</a></li>
         </ul>
       </div>
-    </div> 
+    </div>
 
-     <section class="backdrop is-hidden" data-modal>
+    <section class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal__close" data-modal-close type="button">X</button>
 
@@ -160,13 +160,10 @@
       <button class="section1__button" type="button" data-modal-open>
         Solicite nuestro servicio
       </button>
-    </section> 
-
-
+    </section>
 
     <div class="container">
       <section class="section2">
-     
         <ul class="section2__caracteristicas">
           <li class="section2__list">
             <div class="section2__container">
@@ -224,13 +221,11 @@
               asignadas. Es hora de simplificar los procesos laborales.
             </p>
           </li>
-
         </ul>
       </section>
     </div>
 
-    
-     <div class="container">
+    <div class="container">
       <section class="section3">
         <h2 class="section3__tittle2">A qué nos dedicamos</h2>
         <ul class="section3__list">
@@ -257,21 +252,25 @@
           </li>
         </ul>
       </section>
-    </div>  
+    </div>
 
-        
-     <section class="section4">
+    <section class="section4">
       <div class="container">
         <h2 class="section4__tittle3">Nuestro Equipo</h2>
 
         <ul class="section4_ul">
           <li class="section4__image">
-            <img src="images/andres.jpg" alt="Andres" width="270" />
+            <picture>
+              <source
+                srcset="./images/andres.jpg 1x, ./images/andres@2X.jpg 2x"
+              />
+              <img src="images/andres.jpg" alt="Andres" width="270" />
+            </picture>
 
             <p class="section4__name-worker">Andrés Cubo</p>
             <p class="section4__profesion">Diseñador de Productos</p>
 
-           Social network worker
+            Social network worker
 
             <div class="social-network">
               <a class="section4__link" href="#">
@@ -298,11 +297,18 @@
             </div>
           </li>
           <li class="section4__image">
-            <img src="images/carla.jpg" alt="Carla" width="270" />
+             <picture>
+              <source
+                srcset="./images/carla.jpg 1x, ./images/carla@2X.jpg 2x"
+              />
+             
+              <img src="images/carla.jpg" alt="Carla" width="270" />
+              
+            </picture>
 
             <p class="section4__name-worker">Carla Palacios</p>
             <p class="section4__profesion">Desarrolladora Frontend</p>
-            social network worker 
+            social network worker
             <div class="social-network">
               <a class="section4__link" href="#">
                 <svg class="section4-icon">
@@ -328,12 +334,19 @@
           </li>
 
           <li class="section4__image">
-            <img src="images/mario.jpg" alt="Mario" width="270" />
+           
+ <picture>
+              <source
+                srcset="./images/mario.jpg 1x, ./images/mario@2X.jpg 2x"
+              />
+              
+               <img src="images/mario.jpg" alt="Mario" width="270" />
 
+            </picture>
             <p class="section4__name-worker">Mario Dorado</p>
             <p class="section4__profesion">Marketing</p>
 
-             social network worker 
+            social network worker
             <div class="social-network">
               <a class="section4__link" href="#">
                 <svg class="section4-icon">
@@ -359,11 +372,18 @@
           </li>
 
           <li class="section4__image">
-            <img src="images/pablo.jpg" alt="Pablo" width="270" />
+
+             <picture>
+              <source
+                srcset="./images/pablo.jpg 1x, ./images/pablo@2X.jpg 2x"
+              />
+              <img src="images/pablo.jpg" alt="Pablo" width="270" />
+            </picture>
+            
 
             <p class="section4__name-worker">Pablo Mijangos</p>
             <p class="section4__profesion">Diseñador IU</p>
-            social network worker 
+            social network worker
             <div class="social-network">
               <a class="section4__link" href="#">
                 <svg class="section4-icon">
@@ -389,9 +409,9 @@
           </li>
         </ul>
       </div>
-    </section>  
+    </section>
 
-     <div class="container">
+    <div class="container">
       <div class="section5">
         <h4 class="section5-text">Clientes Regulares</h4>
         <div class="section5__container-logos">
@@ -427,66 +447,64 @@
           </a>
         </div>
       </div>
-    </div>   
+    </div>
 
-
-     <footer class="footer">
+    <footer class="footer">
       <div class="container footer_div">
-              <div class="footer-address-logo">
-                <p class="logo footer__logo">WebStudio</p>
+        <div class="footer-address-logo">
+          <p class="logo footer__logo">WebStudio</p>
 
-                <address>
-                  <p class="footer__address">
-                    Calz. Ticomán 500, Ciudad de <br />México, CDMX, México<br />
-                    <a class="footer-contact" href="info@example.com"
-                      >info@example.com</a
-                    ><br />
-                    <a class="footer-contact" href="+52 55 5529 6000"
-                      >+52 55 5529 6000</a
-                    >
-                  </p>
-                </address>
-              </div>
+          <address>
+            <p class="footer__address">
+              Calz. Ticomán 500, Ciudad de <br />México, CDMX, México<br />
+              <a class="footer-contact" href="info@example.com"
+                >info@example.com</a
+              ><br />
+              <a class="footer-contact" href="+52 55 5529 6000"
+                >+52 55 5529 6000</a
+              >
+            </p>
+          </address>
+        </div>
 
-   
-    <div class="footer-redes">
-                <p class="footer-text">ENCUENTRENOS EN</p>
+        <div class="footer-redes">
+          <p class="footer-text">ENCUENTRENOS EN</p>
 
-                <ul class="footer__social-network">
-                  <li class="footer__icon">
-                    <a href="#" class="footer__social-link">
-                      <svg class="footer__svg">
-                        <use href="./images/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
+          <ul class="footer__social-network">
+            <li class="footer__icon">
+              <a href="#" class="footer__social-link">
+                <svg class="footer__svg">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
 
-                  <li class="footer__icon">
-                    <a href="#" class="footer__social-link">
-                      <svg class="footer__svg">
-                        <use href="./images/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
+            <li class="footer__icon">
+              <a href="#" class="footer__social-link">
+                <svg class="footer__svg">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
 
-                  <li class="footer__icon">
-                    <a href="#" class="footer__social-link">
-                      <svg class="footer__svg">
-                        <use href="./images/icons.svg#icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="footer__icon">
-                    <a href="#" class="footer__social-link">
-                      <svg class="footer__svg">
-                        <use href="./images/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div> 
+            <li class="footer__icon">
+              <a href="#" class="footer__social-link">
+                <svg class="footer__svg">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__icon">
+              <a href="#" class="footer__social-link">
+                <svg class="footer__svg">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-    <div class="footer-form">
+        <div class="footer-form">
           <form action="">
             <label class="footer__form-label" for="">
               SUSCRIBACE AL BOLETIN INFORMATIVO</label
@@ -508,7 +526,7 @@
           </button>
         </div>
       </div>
-    </footer>  
+    </footer>
     <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
