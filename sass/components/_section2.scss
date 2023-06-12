@@ -54,11 +54,11 @@
     }
   }
 }
+
 @include screen-1200{
 
     .container{
-        width:1200px;
-        padding: 0;
+        width:1170px;
         height: auto;
 
     .section2 {
@@ -72,30 +72,34 @@
 }
 
 
-@include screen-640{
 
-    .container{
-        width:640px;
-        padding: 0;
 
-    .section2 {
-        
-        .section2__caracteristicas {
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-    }
+@include screen-768{
+
+  .container{
+      width:738px;
+      
+      
+
+  .section2 {
+    height: auto;
+      
+      .section2__caracteristicas {
+          justify-content: center;
+          flex-wrap: wrap;
+      }
+  }
 }
 }
-
-
 @include screen-480{
 
     .container{
-        width:480px;
-        padding: 0;
+        width:450px;
+          height: auto;
+            margin-bottom: 60px;
 
     .section2 {
+    
         
         .section2__caracteristicas {
             justify-content: center;

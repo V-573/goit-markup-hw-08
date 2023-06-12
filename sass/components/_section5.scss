@@ -44,13 +44,44 @@
     outline: none;
 }
   
- 
+ @include screen-1200 {
+    .container  {
+        width: 1170px;
+    }
+
+ }
+
+ @include screen-768 {
+
+     .container {
+         width: 738px;
+
+         .section5 {
+
+            height: auto;
+             .section5__container-logos {
+                 @include flex(normal, space-evenly);
+                 gap: 30px;
+                 flex-wrap: wrap;
+
+                 .section5__link-container {
+                     width: 210px;
+                     height: 92px;
+
+
+
+                 }
+
+             }
+         }
+     }
+ }
   
 @include screen-480{
     
        .container{
-           width:480px;
-           padding: 0;
+           width:450px;
+           
      .section5{
       
          .section5__container-logos{

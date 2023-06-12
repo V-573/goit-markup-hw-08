@@ -1,27 +1,21 @@
-@mixin flex($align, $justify){
+@mixin flex ($align, $justify){
     display:flex;
     align-items: $align;
     justify-content: $justify;
 }
-
-@mixin screen-480 {
-@media only  screen and (max-width: 480.98px){
-    @content;
-}
-
-}
-
-
-@mixin screen-640 {
-@media only  screen and (max-width: 640px){
-        @content;
-}
-}
-
-
-
 @mixin screen-1200 {
-@media only  screen and (max-width: 1200px){
-        @content;
-}
-}
+ @media only  screen and (max-width: 1200px){
+         @content;
+ }
+ }
+ 
+  @mixin screen-768 {
+ @media only  screen and (max-width: 768px){
+         @content;
+ }}
+
+ @mixin screen-480 {
+ @media only  screen and (max-width: 480.98px){
+     @content;
+ }}
+

@@ -1,155 +1,305 @@
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 
-.header {
-
+  .header1 {
     @include flex(center, space-between);
-    margin-top:24px;
+    margin-top: 24px;
     margin-bottom: 22px;
-    
 
-    .navbar{
-        display: flex; 
-        margin-right: 306px;
-
-        &__menu{
-            @include flex(normal, space-between);
-            list-style-type: none;
-            width: 293px;
-        }
-        &__list{
-        position: relative;
-        }
-        &__link {
-        color:  $color-text-dark;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 16px;
-        letter-spacing: 0.02    
-        }
-
-        &__link:hover,      
-        &__link:focus {
-        color:$color-blue;
-        outline: none;
-        
-        }
-    
-        &__link::after{
-        content: "";
-        position: absolute;
-        bottom: -27px;
-        left: 0; 
-        width: 0;
-        height: 4px;
-        background: $color-blue;
-        border-radius: 12px;
-        }
-    
-        &__link:hover::after{
-        width:100%;
-        }
-    
-        
-          
+    .logo {
+      font-family: "Raleway", sans-serif;
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 26px;
+      letter-spacing: 0.03em;
+      color: $color-blue;
     }
-  
-  
-  
-    .booking{
+
+    .menu-toggle {
+      display: none;
+      position: absolute;
+      top: 30px;
+      right: 16px;
+      background-color: white;
+      width: 24px;
+      height: 24px;
+      border: none;
+
+      .svg_hamburger {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .navbar {
+      .navbar__menu {
         @include flex(normal, space-between);
-    
-  
-        &__link2{
-        position:relative;
-        text-align: end; /*coloque el texto al final del contenedor para darle espacio al svg*/
+        list-style-type: none;
+        width: 293px;
+
+        .navbar__list {
+          position: relative;
+
+          .navbar__link {
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.02em;
+          }
+
+          .navbar__link:hover,
+          .navbar__link:focus {
+            color: $color-blue;
+            outline: none;
+          }
+
+          .navbar__link::after {
+            content: "";
+            position: absolute;
+            bottom: -28px;
+            left: 0;
+            width: 0;
+            height: 4px;
+            background: $color-blue;
+            border-radius: 12px;
+          }
+
+          .navbar__link:hover::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .booking {
+      @include flex(normal, space-between);
+
+      &__link2 {
+        position: relative;
+        text-align: end;
         font-weight: 500;
         font-size: 14px;
         line-height: 16px;
         letter-spacing: 0.02em;
-        color:$color-text;
+        color: $color-text;
+        text-decoration: none;
+
+        .booking__icon {
+          position: absolute;
+          fill: #757575;
+          left: 0px;
         }
-    
-        &__link2--email{
-            margin-right: 30px;
-            width: 161px;
+
+        .booking__icon--sobre {
+          height: 12px;
+          width: 16px;
+          top: 2px;
         }
-        
-        &__link2--phone{
-            width: 142px;
+
+        .booking__icon--phone {
+          height: 16px;
+          width: 10px;
+          top: 0px;
         }
-        
-        &__icon{
-        position: absolute;
-        fill: $color-text;
-        left:0px;
-        }
-        
-        
-        &__icon--sobre {
-            height: 12px;
-            width: 16px;
-            top:2px;
-        }   
-        
-        &__icon--phone {
-            height: 16px;
-            width: 10px;
-            top:0px;
-        }
-        
-        &__link2:hover{
-            color:$color-blue;
-            outline: none;
-        }
-        
-        &__link2:hover .booking__icon,
-        &__link2:focus .booking__icon
-            {
-                color:$color-blue;
-                outline: none;
-                fill:$color-blue;
-            }
-           
+      }
+
+      &__link2:hover {
+        color: $color-blue;
+        outline: none;
+      }
+
+      &__link2:hover .booking__icon,
+      &__link2:focus .booking__icon {
+        color:  $color-blue;
+        outline: none;
+        fill:  $color-blue;
+      }
+
+      &__link2--email {
+        margin-right: 30px;
+        width: 161px;
+      }
+
+      &__link2--phone {
+        width: 142px;
+      }
+    }
+  }
+
+  .menu-container {
+    display: none;
+    /*menu que debe aparecer cuando se de click en hamburgesa*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 32px;
+    background-color: #fff;
+    z-index: 999;
+
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+
+    .is-open {
+      transform: translateX(0);
     }
 
-    
-     
-}
+    .menu-toggle {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background-color: white;
+      width: 24px;
+      height: 24px;
+      border: none;
 
-@include screen-480{
-    .logo{
-        margin-left: 30px;
+      .svg_close {
+        width: 24px;
+        height: 24px;
+      }
     }
 
-    .container{
-        width:480px;
-        height:60px;
-        padding: 0;
-        .header {
+    .mobile-menu {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      margin-top: 50px;
+      margin-bottom: 302px;
 
-          
-            @include flex(center, space-between);
-               
-          
-            .navbar{
+      .link {
+        display: block;
 
-                display:  none;  
-                }
-                .booking{
-                    display: none;
-                }
+        margin-left: 40px;
+        margin-top: 32px;
+        text-decoration: none;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 47px;
+        letter-spacing: 0.02em;
 
-         
-            
-            }
-        }
+        color: #212121;
+      }
+    }
+
+    .num_contact {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 40px;
+      margin-left: 40px;
+      margin-bottom: 32px;
+
+      letter-spacing: 0.02em;
+
+      color: #2196f3;
+    }
+
+    .email_contact {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0.02em;
+
+      color: #757575;
+      margin-left: 40px;
+      margin-bottom: 64px;
+    }
+
+    .info_social_network {
+      display: flex;
+      list-style: none;
+      margin-left: 40px;
+
+      .link {
+        margin-right: 20px;
+        text-decoration: none;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+
+        letter-spacing: 0.02em;
+
+        color: #2196f3;
+      }
+    }
+  }
+ }
+
+
+
+ @include screen-1200{
+
+.container {
+        width: 1170px;
+        height: 80px;
+
+        
+    }
+
+ }
+
+@include screen-768 {
+   .container {
+     width: 738px;
+     height: 80px;
+     .header1 {
+       .booking {
+         flex-direction: column;
+         justify-content: end;
+         .booking__link2 {
+           margin-bottom: 10px;
+           margin-right: 0;
+         }
+       }
+     }
+   }
 }
-
-
-@include screen-480{
-
  
 
-
-
+ 
+ @include screen-480 {
+   .container {
+     width: 450px;
+     height: 60px;
+     padding-left: 015px;
+     padding-right: 15px;
+     .header1 {
+       .menu-toggle {
+         display: unset;
+         .svg_hamburger {
+           width: 24px;
+           height: 24px;
+         }
+        }
+       .navbar {
+         display: none;
+       }
+       .booking {
+         display: none;
+       }
+     
+     .menu-container {
+       display: unset;
+       .is-open {
+         transform: translateX(0);
+       }
+     }
+   }
+ }
 }
+  
