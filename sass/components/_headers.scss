@@ -1,18 +1,24 @@
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+.header {
+  margin-top: 24px;
+  margin-bottom: 22px;
 
-  .header1 {
-    @include flex(center, space-between);
-    margin-top: 24px;
-    margin-bottom: 22px;
+
+  .container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
 
     .logo {
       font-family: "Raleway", sans-serif;
-      font-family: "Raleway";
       font-style: normal;
       font-weight: 700;
       font-size: 26px;
@@ -20,68 +26,59 @@
       color: $color-blue;
     }
 
-    .menu-toggle {
-      display: none;
-      position: absolute;
-      top: 30px;
-      right: 16px;
-      background-color: white;
-      width: 24px;
-      height: 24px;
-      border: none;
+    .navbar__menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style-type: none;
+      width: 293px;
 
-      .svg_hamburger {
-        width: 24px;
-        height: 24px;
-      }
-    }
+      .navbar__list {
+        position: relative;
 
-    .navbar {
-      .navbar__menu {
-        @include flex(normal, space-between);
-        list-style-type: none;
-        width: 293px;
-
-        .navbar__list {
-          position: relative;
-
-          .navbar__link {
-            color: black;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 16px;
-            letter-spacing: 0.02em;
-          }
-
-          .navbar__link:hover,
-          .navbar__link:focus {
-            color: $color-blue;
-            outline: none;
-          }
-
-          .navbar__link::after {
-            content: "";
-            position: absolute;
-            bottom: -28px;
-            left: 0;
-            width: 0;
-            height: 4px;
-            background: $color-blue;
-            border-radius: 12px;
-          }
-
-          .navbar__link:hover::after {
-            width: 100%;
-          }
+        .navbar__link {
+          color: black;
+          text-decoration: none;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: 0.02em;
         }
+
+        .navbar__link:hover,
+        .navbar__link:focus {
+          color: $color-blue;
+          outline: none;
+        }
+
+        .navbar__link::after {
+          content: "";
+          position: absolute;
+          bottom: -28px;
+          left: 0;
+          width: 0;
+          height: 4px;
+          background: $color-blue;
+          border-radius: 12px;
+        }
+
+        .navbar__link:hover::after {
+          width: 100%;
+        }
+
       }
+
+
+
+
     }
 
     .booking {
-      @include flex(normal, space-between);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-      &__link2 {
+      .booking__link2 {
         position: relative;
         text-align: end;
         font-weight: 500;
@@ -102,6 +99,15 @@
           width: 16px;
           top: 2px;
         }
+      }
+
+      .booking__link2--email {
+        margin-right: 30px;
+        width: 161px;
+      }
+
+      .booking__link2--phone {
+        width: 142px;
 
         .booking__icon--phone {
           height: 16px;
@@ -110,200 +116,239 @@
         }
       }
 
-      &__link2:hover {
+      .booking__link2:hover {
         color: $color-blue;
         outline: none;
       }
 
-      &__link2:hover .booking__icon,
-      &__link2:focus .booking__icon {
-        color:  $color-blue;
+      .booking__link2:hover .booking__icon,
+      .booking__link2:focus .booking__icon {
+        color: $color-blue;
         outline: none;
-        fill:  $color-blue;
+        fill: $color-blue;
       }
 
-      &__link2--email {
-        margin-right: 30px;
-        width: 161px;
-      }
-
-      &__link2--phone {
-        width: 142px;
-      }
-    }
-  }
-
-  .menu-container {
-    display: none;
-    /*menu que debe aparecer cuando se de click en hamburgesa*/
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    padding: 32px;
-    background-color: #fff;
-    z-index: 999;
-
-    transform: translateX(100%);
-    transition: transform 250ms ease-in-out;
-
-    .is-open {
-      transform: translateX(0);
     }
 
     .menu-toggle {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      background-color: white;
-      width: 24px;
-      height: 24px;
+      min-height: 40px;
+      min-width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      cursor: pointer;
       border: none;
+      border-radius: 50%;
+      outline: none;
 
-      .svg_close {
+      .svg_hamburger {
         width: 24px;
         height: 24px;
       }
-    }
 
-    .mobile-menu {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      margin-top: 50px;
-      margin-bottom: 302px;
+      .svg_hamburger:hover,
+      .svg_hamburger:focus {
 
-      .link {
-        display: block;
+        fill: #2196f3;
 
-        margin-left: 40px;
-        margin-top: 32px;
-        text-decoration: none;
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 40px;
-        line-height: 47px;
-        letter-spacing: 0.02em;
-
-        color: #212121;
       }
     }
 
-    .num_contact {
-      font-family: "Roboto";
-      font-style: normal;
-      font-weight: 500;
-      font-size: 34px;
-      line-height: 40px;
-      margin-left: 40px;
-      margin-bottom: 32px;
-
-      letter-spacing: 0.02em;
-
-      color: #2196f3;
+    .menu-container.is-open {
+      transform: translateX(0);
     }
 
-    .email_contact {
-      font-family: "Roboto";
-      font-style: normal;
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 28px;
-      letter-spacing: 0.02em;
+    .menu-container {
+      position: fixed;
+      top: 12px;
+      left: 2px;
+      width: 100%;
+      height: 100vh;
+      background-color: #fff;
+      z-index: 999;
+      transform: translateX(100%);
+      transition: transform 250ms ease-in-out;
 
-      color: #757575;
-      margin-left: 40px;
-      margin-bottom: 64px;
-    }
 
-    .info_social_network {
-      display: flex;
-      list-style: none;
-      margin-left: 40px;
+      .menu-toggle {
+        position: absolute;
+        top: 0px;
+        left: 440px;
+        background-color: white;
+        width: 24px;
+        height: 24px;
+        border: none;
 
-      .link {
-        margin-right: 20px;
-        text-decoration: none;
+        .svg_close {
+          width: 24px;
+          height: 24px;
+        }
+
+        .svg_close:hover,
+        .svg_close:focus {
+          fill: #2196f3;
+
+        }
+
+      }
+
+      .mobile-menu {
+        padding: 0;
+        margin: 0;
+        margin-top: 32px;
+        margin-bottom: 300px;
+        list-style: none;
+
+        .link {
+          display: block;
+          margin-left: 40px;
+          text-decoration: none;
+
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 40px;
+          line-height: 47px;
+          letter-spacing: 0.02em;
+          color: #212121;
+        }
+
+        .link:hover {
+          color: #2196f3;
+        }
+      }
+
+      .num_contact {
         font-family: "Roboto";
         font-style: normal;
         font-weight: 500;
-        font-size: 18px;
-        line-height: 22px;
-
+        font-size: 34px;
+        line-height: 40px;
+        margin-left: 40px;
+        margin-bottom: 32px;
         letter-spacing: 0.02em;
-
         color: #2196f3;
       }
+
+      .email_contact {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        color: #757575;
+        margin-left: 40px;
+        margin-bottom: 64px;
+      }
+
+      .info_social_network {
+        display: flex;
+        list-style: none;
+
+        .link {
+          margin-right: 20px;
+          text-decoration: none;
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: 0.02em;
+          color: #2196f3;
+        }
+
+      }
+
     }
+
   }
- }
+
+  /*cierre header_container*/
+}
+
+/*cierre header*/
 
 
+@include screen-480-min {
 
- @include screen-1200{
+  .header {
+    .header_container {
+      // width: 480px;
 
-.container {
-        width: 1170px;
-        height: 80px;
+      .menu-container {
+        display: none;
+      }
 
-        
+      .menu-toggle {
+        display: none;
+      }
+
     }
 
- }
+  }
+
+  /*cierre header*/
+
+
+}
 
 @include screen-768 {
-   .container {
-     width: 738px;
-     height: 80px;
-     .header1 {
-       .booking {
-         flex-direction: column;
-         justify-content: end;
-         .booking__link2 {
-           margin-bottom: 10px;
-           margin-right: 0;
-         }
-       }
-     }
-   }
-}
- 
 
- 
- @include screen-480 {
-   .container {
-     width: 450px;
-     height: 60px;
-     padding-left: 015px;
-     padding-right: 15px;
-     .header1 {
-       .menu-toggle {
-         display: unset;
-         .svg_hamburger {
-           width: 24px;
-           height: 24px;
-         }
-         
+  .header {
+    .header_container {
+      width: 738px;
+
+      .booking {
+        flex-direction: column;
+
+        .booking__link2--email {
+          margin: 0;
         }
-                .menu-toggle:hover .svg_hamburger {
-                  fill: #2196f3;
-                }
-       .navbar {
-         display: none;
-       }
-       .booking {
-         display: none;
-       }
-     
-     .menu-container {
-       display: unset;
-       .is-open {
-         transform: translateX(0);
-       }
-     }
-   }
- }
+
+        .booking__link2--phone {
+          margin-right: 20px;
+          margin-top: 10px;
+        }
+      }
+
+
+
+
+    }
+
+  }
+
+  /*cierre header*/
+
+
 }
-  
+
+
+
+
+@include screen-480 {
+
+  .header {
+    .header_container {
+      width: 480px;
+
+      .booking {
+        display: none;
+      }
+
+      .navbar {
+        display: none;
+      }
+
+
+    }
+
+  }
+
+  /*cierre header*/
+
+}

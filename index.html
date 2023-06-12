@@ -19,8 +19,8 @@
     <title>index</title>
   </head>
   <body>
-    <div class="container">
-      <header class="header1">
+        <header class="header">
+      <div class="container header_container">
         <p class="logo">WebStudio</p>
 
         <button
@@ -52,8 +52,7 @@
             class="booking__link2 booking__link2--email"
             href="info@devstudio.com"
             ><svg class="booking__icon booking__icon--sobre">
-              <use href="./images/icons.svg#icon-sobre"></use>
-              </svg>info@devstudio.com</a
+              <use href="./images/icons.svg#icon-sobre"></use></svg              >info@devstudio.com</a
           >
           <a
             class="booking__link2 booking__link2--phone"
@@ -62,32 +61,34 @@
               <use href="./images/icons.svg#icon-smartphone"></use></svg            >+52 55 5529 6000</a
           >
         </div>
-      </header>
 
-      <div class="menu-container js-menu-container" id="mobile-menu">
-        <button class="menu-toggle js-close-menu">
-          <svg class="svg_close">
-            <use href="./images/sprite.svg#close"></use>
-          </svg>
-        </button>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="menu-toggle js-close-menu">
+            <svg class="svg_close">
+              <use href="./images/sprite.svg#close"></use>
+            </svg>
+          </button>
 
-        <ul class="mobile-menu">
-          <li><a href="" class="link">Estudio</a></li>
-          <li><a href="" class="link">Producto</a></li>
-          <li><a href="" class="link">Portafolio</a></li>
-        </ul>
-        <div>
-          <p class="num_contact">+38 096 111 11 11</p>
-          <p class="email_contact">infodevstudio.com</p>
+          <ul class="mobile-menu">
+            <li><a href="" class="link">Estudio</a></li>
+            <li><a href="" class="link">Producto</a></li>
+            <li><a href="" class="link">Contactos</a></li>
+          </ul>
+          <div>
+            <p class="num_contact">+38 096 111 11 11</p>
+            <p class="email_contact">infodevstudio.com</p>
+          </div>
+          <ul class="info_social_network">
+            <li><a href="" class="link">Instagram</a></li>
+            <li><a href="" class="link">Twitter</a></li>
+            <li><a href="" class="link">Facebook</a></li>
+            <li><a href="" class="link">Linkedin</a></li>
+          </ul>
         </div>
-        <ul class="info_social_network">
-          <li><a href="" class="link">Instagram</a></li>
-          <li><a href="" class="link">Twitter</a></li>
-          <li><a href="" class="link">Facebook</a></li>
-          <li><a href="" class="link">Linkedin</a></li>
-        </ul>
       </div>
-    </div>
+    </header>
+
+    
 
     <section class="backdrop is-hidden" data-modal>
       <div class="modal">
