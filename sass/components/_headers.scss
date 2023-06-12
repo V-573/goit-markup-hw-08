@@ -285,7 +285,11 @@
            width: 24px;
            height: 24px;
          }
+         
         }
+                .menu-toggle:hover .svg_hamburger {
+                  fill: #2196f3;
+                }
        .navbar {
          display: none;
        }
