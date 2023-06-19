@@ -1,12 +1,12 @@
 .footer {
   @include flex(flex-start, normal);
-
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
 
   .footer_div {
     display: flex;
+    flex-wrap: wrap;
     .footer-address-logo {
       margin-right: 70px;
 
