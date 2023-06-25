@@ -6,11 +6,13 @@
  
     .section2__caracteristicas {
       display: flex;
-
+      
       list-style-type: none;
       margin-top: 0px;
       margin-bottom: 0px;
       gap: 30px;
+flex-wrap:wrap;
+justify-content: center;
 
       .section2__list {
         font-weight: 400;
@@ -18,11 +20,13 @@
         line-height: 24px;
         letter-spacing: 0.03em;
         width: 270px;
+        
 
         .section2__container {
           @include flex(center, center);
 
-          width: 270px;
+          // width: 270px;
+          // flex-basis: calc((100% - 90px) / 4);
           height: 120px;
           background: $color-svg-section25;
           border-radius: 4px;
@@ -58,7 +62,8 @@
 @include screen-1200{
 
     .container{
-        width:1170px;
+        width:100vw;
+        padding: 0;
         height: auto;
 
     .section2 {

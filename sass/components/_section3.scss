@@ -17,6 +17,8 @@
       @include flex(normal, space-between);
       margin-bottom: 94px;
       list-style-type: none;
+      flex-wrap:wrap;
+      
 
       .section3__box {
         @include flex(flex-end, center);
@@ -62,7 +64,14 @@
 
 @include screen-1200 {
   .container {
-    width: 1170px;
+    // width: 1170px;
+    width: 100vw;
+    .section3{
+      &__list{
+justify-content: center;
+
+      }
+    }
   }
 }
 

@@ -46,7 +46,7 @@
   
  @include screen-1200 {
     .container  {
-        width: 1170px;
+        // width: 1170px;
     }
 
  }
@@ -54,7 +54,8 @@
  @include screen-768 {
 
      .container {
-         width: 738px;
+        //  width: 738px;
+        width: 100vw;;
 
          .section5 {
 

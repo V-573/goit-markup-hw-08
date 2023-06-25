@@ -24,14 +24,17 @@
       font-size: 26px;
       letter-spacing: 0.03em;
       color: $color-blue;
+
     }
 
     .navbar__menu {
+      width: 240px;
       display: flex;
+      flex-basis: calc( (100% - 60px) / 3);
       align-items: center;
       justify-content: space-between;
       list-style-type: none;
-      width: 293px;
+    
 
       .navbar__list {
         position: relative;
@@ -78,6 +81,8 @@
       align-items: center;
       justify-content: space-between;
 
+
+
       .booking__link2 {
         position: relative;
         text-align: end;
@@ -113,6 +118,7 @@
           height: 16px;
           width: 10px;
           top: 0px;
+          
         }
       }
 
@@ -272,13 +278,29 @@
 
 /*cierre header*/
 
+@include screen-1200{
+  .header{
+    .container{
+    width: 100vw;
+    padding: 0;
+    }
+    .header_container{
+      .logo{
+        padding-left: 15px;
+      }
+      .booking{
+        padding-right: 15px;
+      }
+    }
+
+  }
+
+}
 
 @include screen-480-min {
 
   .header {
     .header_container {
-      // width: 480px;
-
       .menu-container {
         display: none;
       }
@@ -286,46 +308,74 @@
       .menu-toggle {
         display: none;
       }
-
     }
 
   }
-
   /*cierre header*/
-
-
 }
 
 @include screen-768 {
 
   .header {
-    .header_container {
-      width: 738px;
 
-      .booking {
-        flex-direction: column;
+      .container {
+          width: 100vw;
+          padding: 0;
 
-        .booking__link2--email {
-          margin: 0;
         }
 
-        .booking__link2--phone {
-          margin-right: 20px;
-          margin-top: 10px;
+        .header_container {
+
+          .logo {
+             padding-left: 0px;
+            font-size: 24px;
+          }
+
+          .booking {
+            flex-direction: column;
+            justify-content: start;
+           
+            // padding-right: 15px;
+            .booking__link2--email {
+                margin: 0;
+              }
+
+              .booking__link2--phone {
+                // margin-right: 20px;
+                margin-top: 10px;
+                font-size: 12px;
+                padding: 0;
+                 width: 161px;
+          .booking__icon--phone {
+              left: 3px;
+                               }
+
+              }                           
+                       
+          }
+
+.navbar {
+
+  .navbar__menu {
+    width: 200px;
+    flex-basis: calc((100% - 30px) / 3);
+  }
+
+}
+
+
         }
+
       }
 
 
 
-
-    }
 
   }
 
   /*cierre header*/
 
 
-}
 
 
 

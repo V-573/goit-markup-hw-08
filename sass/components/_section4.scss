@@ -1,12 +1,19 @@
 
-   
+  
+    
+
 .section4 {
-    height: 708px;
+    height: auto;
     margin-bottom: 94px;
     text-align: center;
-    background-color: #f5f4fa;
+    
+     background-color: #f5f4fa;
+    
+ .container{  
 
-    .container{
+    
+
+  
 
     
    
@@ -26,7 +33,9 @@
     }
 
    .section4_ul {
-        
+         flex-wrap:wrap;
+         height: 100%;
+
         @include flex(normal, center);
         list-style-type: none;
         .section4__image {
@@ -35,6 +44,7 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
         padding-bottom: 30px;
+       
 
         
             .section4__name-worker {
@@ -105,9 +115,16 @@
   }
 
   @include screen-1200 {
-      .container {
-          width: 1170px;
+    .section4{
+          width:100vw;
+         .container {
+        //   width: 1170px;
+      
+
+
       }
+    }
+     
   }
 
 
@@ -118,7 +135,8 @@
             height:auto;
             
             .container {
-                width: 738px;
+                // width: 738px;
+                width:100vw;
               
                 .section4_ul {
                     @include flex(normal, space-evenly);
